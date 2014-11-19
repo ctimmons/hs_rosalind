@@ -1,7 +1,12 @@
 dist
 cabal-dev
+*.aux
 *.o
 *.hi
+*.hp
+*.prof
+*.ps
+*.exe
 *.chi
 *.chs.h
 .virtualenv
