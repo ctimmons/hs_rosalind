@@ -1,6 +1,7 @@
 module Main where
 
 import Data.Char
+import Data.Function
 import Data.List
 import qualified Data.Map.Strict as Map
 
@@ -21,9 +22,10 @@ buildFastaMap (key, map) line =
     value = map Map.! key
 
 gcContent :: String -> Float
-gcContent s = (fromIntegral(length filteredContent) / fromIntegral(length s)) * 100.0
+gcContent s = ((length filteredContent) `intDiv` (length s)) * 100.0
   where
     filteredContent = filter (\c -> (c == 'C') || (c == 'G')) s
+    intDiv = (/) `on` fromIntegral
 
 maxValue :: (String, Float) -> String -> Float -> (String, Float)
 maxValue acc key value =
