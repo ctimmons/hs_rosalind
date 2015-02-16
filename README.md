@@ -5,7 +5,7 @@ Haskell implementations of the exercises found at the [Rosalind Project](http://
 
 Unless otherwise stated, all of the programs:
 
-- Compile with a simple call to "ghc main"
+- Compile with a simple call to "ghc -i.. main"
 - Run by redirecting a data file into main.exe, e.g. "main < rosalind.data".  Any results are sent to stdout.
  
 
